@@ -14,13 +14,13 @@
         <h3>Promocja 15% obejmuje artykuły:</h3>
         <ul id="lista">
             <?php
-            $conn = mysqli_connect("localhost", "root", "", "sklep");
-            $sql = "Select nazwa from towary where promocja = 1";
-            $result = mysqli_query($conn, $sql );
-            while($row = mysqli_fetch_assoc($result)){
+            $conn = new mysqli("localhost","root", "", "sklep");
+            $result = $conn->query("Select nazwa from towary where promocja = 1");
+            while($row = $result->fetch_assoc()){
                 echo "<li>".$row["nazwa"]."</li>";
             }
-            mysqli_close($conn);
+            $result->close();
+            $conn->close();
             ?>
         </ul>
     </div>
@@ -36,15 +36,13 @@
             <input type="submit" value="WYBIERZ" name="przycisk">
         </form>
         <?php
-         
+         $conn = new mysqli("localhost","root", "", "sklep");
         if (isset($_POST["przycisk"])){
-            $conn = mysqli_connect("localhost","root","","sklep");
-            $result = mysqli_query($conn,"select cena from towary where nazwa ='".$_POST["przedmiot"]."'");
-            while($row = mysqli_fetch_assoc($result)){
+            $result = $conn->query("select cena from towary where nazwa ='".$_POST["przedmiot"]."'");
+            while($row = $result->fetch_assoc()){
                 echo round($row["cena"]*0.85 , 2);
-            
+            $conn->close();
             }
-            mysqli_close($conn);
         }
         ?>
         
