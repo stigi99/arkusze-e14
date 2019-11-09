@@ -1,0 +1,60 @@
+#container{
+    width: 100%;
+    height: 100%;
+    margin:0;
+    padding: 0;
+    
+
+}
+/* display inline block tez do ulozenia elementow albo flex ukladanie elementow */
+#header {
+    background: #e8c84e;
+    height: 50px;
+    font-size: 130%;
+    text-align: center;
+    
+}
+#left{
+    background: #ffb554;
+    height: 500px;
+    width: 40%;
+    font-size: 130%;
+    float: left;
+
+}
+#middle{
+    height: 500px;
+    width: 30%;
+    text-align: center;
+    float: left;
+}
+#right{
+    background: #ffb544;
+    height: 500px;
+    width: 30%;
+    font-size: 130%;
+    text-align: center;
+    float: left;
+
+}
+#footer{
+    background: #e8c84e;
+    height: 50px;
+    text-align: right;
+    padding: 10px;
+    clear: both;
+    
+
+}
+#lista{
+    padding-top: 30px;
+    background: #ffaa00;
+
+}
+img, h3{
+    margin-top:50px;
+
+}
+#formularz{
+    margin-bottom: 100px;
+}

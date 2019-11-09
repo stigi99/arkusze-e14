@@ -1,0 +1,4 @@
+1.Select nazwa from towary where promocja = 1
+2.Select cena from towary where nazwa = "Cienkopis" 
+3.select dostawcy.nazwa count(towary.idDostawcy) as ilosc from dostawcy, towary where dostawcy.id = towary.idDostawcy Group by dostawcy.nazwa // select dostawcy.nazwa, count(towary.nazwa) from dostawcy inner join towary on dostawcy.id = towary.idDostawcy Group by dostawcy.nazwa
+4. alter table dostawcy add column e_mail text
