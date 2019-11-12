@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="styl.css">
 </head>
 <body> 
-<div id = "container">
+<main id = "container">
     <header id ="header">
         <h1>W naszym sklepie internetowym kupisz najtaniej </h1>
     </header>
-    <div id="left">
+    <section id="left">
         <h3>Promocja 15% obejmuje artykuły:</h3>
         <ul id="lista">
             <?php
@@ -23,8 +23,8 @@
             mysqli_close($conn);
             ?>
         </ul>
-    </div>
-    <div id="middle">
+    </section>
+    <section id="middle">
         <h3>Cena wybranego artykułu w promocji</h3>
         <form id="formularz" method="POST">
             <select name="przedmiot">
@@ -48,12 +48,12 @@
         }
         ?>
         
-    </div>
-    <div id = "right">
+    </section>
+    <section id = "right">
         <h3>Kontakt</h3>
         <p>telefon:123123123</p><p> e-mail:<a href="mailto:bok@sklep.pl">bok@sklep.pl</a></p>
         <img src="promocja2.png" alt="promocja">
-    </div>
+    </section>
     <footer id = "footer">
         <h4>Autor strony Twój numer PESEL</h4>
     </footer>
@@ -61,7 +61,7 @@
 
 
 
-</div>
+</main>
 
 </body>
 </html>
